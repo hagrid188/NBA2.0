@@ -3387,6 +3387,8 @@ function spinSlotMachine() {
     
     // 同步状态
     STATE.currentTeam = targetTeam;
+    // ★ NBA2.0：抽到新队 → 10% 概率弹历史名宿挑选
+    try { if (typeof offerHistoricLegendPick === 'function') offerHistoricLegendPick(targetTeam); } catch(e) {}
     if (STATE._teamsVisited.indexOf(targetTeam) === -1) {
       STATE._teamsVisited.push(targetTeam);
       console.log('[Build] 已访问球队:', STATE._teamsVisited.join(', '));
@@ -3494,6 +3496,8 @@ function rerollTeamOnce() {
   STATE.currentTeam = targetTeam;
   STATE.selectedPlayer = null;
   STATE._shownThisTeam = [];
+  // ★ NBA2.0：重抽新队 → 10% 概率弹历史名宿挑选
+  try { if (typeof offerHistoricLegendPick === 'function') offerHistoricLegendPick(targetTeam); } catch(e) {}
   if (STATE._teamsVisited.indexOf(targetTeam) === -1) STATE._teamsVisited.push(targetTeam);
   // 让老虎机滚动到新球队位置
   try {
@@ -23905,6 +23909,10 @@ function finishViolenceChain() {
 <script src="./perfect-player-event-library.js?v=2"></script>
 <script src="./nba20-event-adapter.js?v=2"></script>
 <script src="./perfect-player-enhancements.js?v=2"></script>
+<!-- ★ NBA2.0 追加补丁（不动主引擎，独立模块） -->
+<script src="./nba20-status-panel.js?v=2"></script>
+<script src="./nba20-legend-flash.js?v=2"></script>
+<script src="./nba20-vote-detail.js?v=2"></script>
 
 </body>
 </html>
