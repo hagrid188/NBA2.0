@@ -1,0 +1,313 @@
+﻿/* 强制浅色：禁用任何系统/浏览器深色适配（黑夜模式） */
+html { color-scheme: light; }
+
+/* ============================================================
+   Era Themes — 时代主题层（纯视觉，不改布局/交互）
+   现代(默认) = 冠军光谱混搭：雷霆蓝橙基调 + 勇士金高亮
+   1984 = 复古球馆 / 1996 = 黄金一代 / 2003 = 千禧金属
+   切换方式：body[data-era="1984|1996|2003"]；无属性 = 现代
+   加载顺序：主 <style> 之后（同优先级规则后加载者胜）
+   性能：背景不用 fixed；不做全局颜色过渡动画
+   ============================================================ */
+
+/* ---------- 现代 · 冠军光谱混搭（默认） ---------- */
+:root {
+  --bg: #eef2f7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f2f6fb;
+  --bg-elevated: #e6edf6;
+  --border: #c6d3e2;
+  --border-light: #d9e2ee;
+  --text: #0b2138;
+  --text-dim: #56677a;
+  --text-muted: #8fa0b4;
+  --orange: #EF3B24;
+  --orange-light: #ff6b4a;
+  --orange-dim: rgba(239,59,36,.12);
+  --orange-bg: rgba(239,59,36,.07);
+  --red: #c62f1f;
+  --gold: #FFC72C;
+  --green: #1f8a70;
+  --navy: #007AC1;
+  --navy-light: #2f97d8;
+  --shadow: 0 2px 12px rgba(11,33,56,.08);
+  --shadow-lg: 0 6px 26px rgba(11,33,56,.14);
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(255,199,44,.09) 0 90px, transparent 91px),
+    radial-gradient(circle at 8% 82%, rgba(0,122,193,.07) 0 70px, transparent 71px),
+    linear-gradient(105deg, rgba(255,255,255,.55), transparent 42%, rgba(239,59,36,.045));
+  background-attachment: scroll;
+}
+
+/* 顶部栏：雷霆蓝转播条 + 勇士金底边 */
+.navbar {
+  background: rgba(0,122,193,.96);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 3px 12px rgba(0,122,193,.22);
+}
+.nav-logo { color: #fff; font-family: var(--font-athletic); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.navbar .nav-logo .hl { color: #ffd24a; }
+
+/* 区块标题：缝线双下划线 */
+.section-title h1 {
+  font-family: var(--font-athletic);
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.section-title h1::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 64px; height: 4px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--gold));
+  box-shadow: 0 0 0 3px rgba(239,59,36,.08);
+}
+
+/* 英雄区：深蓝标题胶囊 */
+.hero-title {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #ffd9a8;
+  font-family: var(--font-athletic);
+  letter-spacing: 2.2px;
+  box-shadow: inset 0 -2px 0 rgba(255,255,255,.08);
+}
+.hero-headline { color: var(--navy); text-shadow: 0 1px 0 rgba(255,255,255,.7); }
+.hero-headline .hl { color: var(--orange); }
+
+/* 揭晓卡：转播式 OVR 渐变数字 */
+.reveal-card {
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.reveal-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--gold), var(--orange));
+}
+.big-ovr {
+  font-family: var(--font-athletic);
+  font-weight: 700;
+  font-size: clamp(64px, 17vw, 88px);
+  letter-spacing: -1px;
+  background: linear-gradient(180deg, var(--orange-light), var(--orange) 60%, #c62f1f);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 6px rgba(239,59,36,.28));
+}
+.big-pos, .big-cname { font-family: var(--font-athletic); letter-spacing: .5px; }
+
+/* 大数字统一转播体 */
+.eos-record, .gc-score, .gc-total, .award-rank, .sh-wins, .sh-losses, .big-ovr {
+  font-family: var(--font-athletic);
+  font-variant-numeric: tabular-nums;
+}
+.eos-record { letter-spacing: 1px; }
+
+/* 卡片精致化 */
+.feature-card, .pos-card, .award-row, .eos-container { box-shadow: var(--shadow); }
+.feature-card { position: relative; overflow: hidden; border-color: rgba(11,33,56,.16); }
+.feature-card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(180deg, var(--orange), var(--gold));
+  opacity: 0; transition: opacity .18s;
+}
+.feature-card.selected::before { opacity: 1; }
+.feature-card::after {
+  content: '';
+  position: absolute; right: -46px; top: 50%;
+  width: 90px; height: 90px; transform: translateY(-50%);
+  border: 2px solid rgba(0,122,193,.1); border-radius: 50%;
+  pointer-events: none;
+}
+.feature-card .fc-title { color: var(--navy); }
+
+/* 按钮：皮革质感 */
+.btn-primary, .feature-card .fc-btn {
+  border: 1px solid rgba(115,40,24,.28);
+  background:
+    radial-gradient(circle at 22% 24%, rgba(255,255,255,.13) 0 1px, transparent 1.5px),
+    linear-gradient(180deg, var(--orange-light), var(--orange));
+  background-size: 8px 8px, auto;
+  box-shadow: 0 4px 0 #a02814, 0 7px 14px rgba(125,51,21,.22);
+}
+.btn-primary:active, .feature-card .fc-btn:active { box-shadow: 0 1px 0 #a02814, 0 3px 8px rgba(125,51,21,.18); }
+.btn-secondary { border-color: rgba(0,122,193,.2); background: rgba(255,255,255,.92); }
+.btn-gold {
+  background: linear-gradient(180deg, #ffd24a, #e6a800);
+  box-shadow: 0 4px 0 #c48a00, 0 6px 12px rgba(247,166,0,.2);
+}
+
+/* 建球员/选队边框 */
+.pos-card, .br-slot-area, .build-progress, .bl-header, .ba-slot, .br-player, .team-picker-modal { border-color: rgba(0,122,193,.2); }
+.pos-card.selected, .br-player.selected {
+  border-color: var(--orange);
+  box-shadow: inset 4px 0 0 var(--orange), 0 3px 12px rgba(11,33,56,.1);
+}
+.br-slot-machine {
+  border-color: var(--navy-light);
+  background: #f8fbfe;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.75), inset 0 3px 14px rgba(0,122,193,.08);
+}
+.progress-bar { background: rgba(0,122,193,.14); }
+.progress-fill { background: linear-gradient(90deg, var(--navy-light), var(--orange)); }
+
+/* 选队弹窗：深蓝渐变头 */
+.team-picker-overlay { background: rgba(7,17,30,.62); }
+.team-picker-modal { border-top: 4px solid var(--orange); box-shadow: 0 18px 60px rgba(7,17,30,.3); }
+.team-picker-header {
+  background: linear-gradient(90deg, var(--navy), var(--navy-light));
+  color: #fff;
+  border-bottom-color: var(--orange);
+}
+.team-picker-header span { font-family: var(--font-athletic); letter-spacing: .5px; }
+.team-picker-header .team-picker-close { border-color: rgba(255,255,255,.2); background: rgba(255,255,255,.1); color: #fff; }
+
+/* 奖项金箔 */
+.award-rank.gold {
+  background: linear-gradient(180deg, #ffd24a, #e6a800);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(160,110,20,.25));
+}
+.award-label { font-family: var(--font-athletic); letter-spacing: .5px; }
+
+/* 冠军标题金箔 */
+.champion-title {
+  font-family: var(--font-athletic);
+  letter-spacing: 3px;
+  background: linear-gradient(180deg, #ffd24a, #e6a800);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- 庆祝弹窗：冠军光谱强调线（颜色由 JS 按年份设置） ---------- */
+.champion-celebration-overlay .champion-card,
+.sixty-win-overlay .sixty-win-card,
+.all99-overlay, .career-night-overlay, .explosive-season-overlay .sixty-win-card {
+  position: relative;
+}
+.champion-celebration-overlay .champion-card::before,
+.sixty-win-overlay .sixty-win-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--celebrate-a, var(--orange)), var(--celebrate-b, var(--gold)), var(--celebrate-a, var(--orange)));
+}
+
+/* ---------- 1984 · 复古球馆 ---------- */
+body[data-era="1984"] {
+  --bg: #eadfc4;
+  --bg-card: #f5ecd9;
+  --bg-card-hover: #efe2c8;
+  --bg-elevated: #e3d2ae;
+  --border: #c9b287;
+  --border-light: #d8c5a0;
+  --text: #3a2515;
+  --text-dim: #6f5a41;
+  --text-muted: #9c8a6f;
+  --orange: #b0562a;
+  --orange-light: #cf7040;
+  --orange-dim: rgba(176,86,42,.14);
+  --orange-bg: rgba(176,86,42,.08);
+  --red: #9c3a22;
+  --gold: #c9a24b;
+  --green: #2f5d3a;
+  --navy: #3a2515;
+  --navy-light: #5c3f24;
+  --shadow: 0 2px 12px rgba(58,37,21,.1);
+  --shadow-lg: 0 6px 26px rgba(58,37,21,.16);
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(201,162,75,.10) 0 90px, transparent 91px),
+    repeating-linear-gradient(0deg, rgba(75,50,28,.05) 0 1px, transparent 1px 72px);
+  background-attachment: scroll;
+}
+body[data-era="1984"] .navbar { background: rgba(58,37,21,.96); border-bottom-color: #c9a24b; }
+body[data-era="1984"] .hero-headline { color: var(--navy); }
+body[data-era="1984"] .feature-card .fc-title { color: var(--navy); }
+
+/* ---------- 1996 · 黄金一代 ---------- */
+body[data-era="1996"] {
+  --bg: #ece5d8;
+  --bg-card: #f8f3e8;
+  --bg-card-hover: #f0e8d8;
+  --bg-elevated: #e2d6c0;
+  --border: #c5b493;
+  --border-light: #d6c9ac;
+  --text: #2a1b45;
+  --text-dim: #5f5480;
+  --text-muted: #948baa;
+  --orange: #7a2e8e;
+  --orange-light: #9a4ab0;
+  --orange-dim: rgba(122,46,142,.14);
+  --orange-bg: rgba(122,46,142,.08);
+  --red: #c23a2e;
+  --gold: #e0a832;
+  --green: #1f7a4d;
+  --navy: #2a1b45;
+  --navy-light: #46306e;
+  --shadow: 0 2px 12px rgba(42,27,69,.1);
+  --shadow-lg: 0 6px 26px rgba(42,27,69,.16);
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(224,168,50,.10) 0 90px, transparent 91px),
+    repeating-linear-gradient(90deg, rgba(122,46,142,.06) 0 1px, transparent 1px 48px);
+  background-attachment: scroll;
+}
+body[data-era="1996"] .navbar { background: rgba(42,27,69,.96); border-bottom-color: #e0a832; }
+body[data-era="1996"] .hero-headline { color: var(--navy); }
+body[data-era="1996"] .feature-card .fc-title { color: var(--navy); }
+
+/* ---------- 2003 · 千禧金属 ---------- */
+body[data-era="2003"] {
+  --bg: #e6e4df;
+  --bg-card: #f5f4f1;
+  --bg-card-hover: #ecebe6;
+  --bg-elevated: #ddd9d1;
+  --border: #b9b6ae;
+  --border-light: #ccc9c2;
+  --text: #1c2b3a;
+  --text-dim: #5a6b7d;
+  --text-muted: #93a2b2;
+  --orange: #b5332a;
+  --orange-light: #cf4a40;
+  --orange-dim: rgba(181,51,42,.14);
+  --orange-bg: rgba(181,51,42,.08);
+  --red: #a22c24;
+  --gold: #a8894f;
+  --green: #2e6b4f;
+  --navy: #2f4f73;
+  --navy-light: #4a6b90;
+  --shadow: 0 2px 12px rgba(28,43,58,.1);
+  --shadow-lg: 0 6px 26px rgba(28,43,58,.16);
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(168,137,79,.10) 0 90px, transparent 91px),
+    linear-gradient(115deg, rgba(47,79,115,.06), transparent 45%, rgba(181,51,42,.05));
+  background-attachment: scroll;
+}
+body[data-era="2003"] .navbar { background: rgba(47,79,115,.96); border-bottom-color: #a8894f; }
+body[data-era="2003"] .hero-headline { color: var(--navy); }
+body[data-era="2003"] .feature-card .fc-title { color: var(--navy); }
+
+/* 无障碍：尊重减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  .feature-card::before { transition: none; }
+}
+
+/* 各时代按钮深阴影色（原硬编码 #c94d1e 的 var 化） */
+:root { --orange-deep: #a02814; }
+body[data-era="1984"] { --orange-deep: #8a3f1c; }
+body[data-era="1996"] { --orange-deep: #5a1f6a; }
+body[data-era="2003"] { --orange-deep: #8a241c; }

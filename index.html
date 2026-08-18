@@ -1,0 +1,1482 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self'; object-src 'none'; base-uri 'self';" />
+  <meta name="spm-id" content="PHBS7947" />
+  <title>我创造的完美球员</title>
+  <script>
+    (function () {
+      var env = new URLSearchParams(window.location.search).get("env");
+      if (env) {
+        window.__COLORBOX_ENV__ = env;
+      }
+    })();
+  </script>
+  
+
+
+  <style>
+    @font-face {
+      font-family: 'hupufont-Medium';
+      font-display: swap;
+      src: url('./hupu-Medium.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'hupufont-Regular';
+      font-display: swap;
+      src: url('./hupu-Regular.ttf') format('truetype');
+    }
+    html, body, #ai-render-root {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    body {
+      overflow: hidden;
+      font-family: 'hupufont-Regular', 'Helvetica Neue', 'PingFang SC', system-ui, -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      --bg: #ffffff;
+    }
+    #ai-render-root {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+    }
+    .ai-render-frame {
+      width: 100%;
+      max-width: 750px;
+      height: 100%;
+      border: 0;
+      background: #ffffff;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+  </style>
+  <script>document.title = "我创造的完美球员"; window.__colorbox_ai_project__ = {"kind":"publish","projectId":"project-ai-1783761934042","settings":{"ownerId":402116,"projectId":"project-ai-1783761934042","title":"我创造的完美球员","trackingCode":"PHBS7947","bizCategory":"match","isGamePlay":true,"postTopicId":"152165","shareInviteParams":"1783761934042","rewardVideoIncomeId":"16899","shareTitle":"","shareSubtitle":"","shareCover":"","theme":{"webviewBackground":"#ffffff","skeletonColor":"#edeef0","containerBackground":"#ffffff"},"dayNightMode":"light"}};</script>
+  <script>
+(function () {
+  // 本地离线版：停用虎扑埋点/统计，避免任何联网上报
+  var noop = function () {};
+  window.HupuHpTracer = window.HupuHpTracer || {};
+  window.HupuHpTracer.track = noop;
+  window.HupuHpTracer.init = noop;
+  window.HupuHpTracer.setMeta = noop;
+  window.HupuHpTracer.setExtData = noop;
+  window.HupuHpTracer.getAB = function (t, cb) { if (typeof cb === "function") cb(null); };
+  window.HupuHpTracer.getStore = function () { return { data: {} }; };
+})();
+</script>
+  <!-- 本地离线版：已移除 WebGuard 错误监控加载 -->
+    <!-- 本地离线版：已移除 hupu-js-bridge（浏览器环境无需） -->
+  <script>
+(function () {
+  window.__COLORBOX_AI_SHELL_CONFIG__ = {
+    projectId: "project-ai-1783761934042",
+    settings: {"ownerId":402116,"projectId":"project-ai-1783761934042","title":"我创造的完美球员","trackingCode":"PHBS7947","bizCategory":"match","isGamePlay":true,"postTopicId":"152165","shareInviteParams":"1783761934042","rewardVideoIncomeId":"16899","shareTitle":"","shareSubtitle":"","shareCover":"","theme":{"webviewBackground":"#ffffff","skeletonColor":"#edeef0","containerBackground":"#ffffff"},"dayNightMode":"light"}
+  };
+  "use strict";
+(() => {
+  var __defProp = Object.defineProperty;
+  var __defProps = Object.defineProperties;
+  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+  var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __propIsEnum = Object.prototype.propertyIsEnumerable;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+  var __spreadValues = (a, b) => {
+    for (var prop in b || (b = {}))
+      if (__hasOwnProp.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    if (__getOwnPropSymbols)
+      for (var prop of __getOwnPropSymbols(b)) {
+        if (__propIsEnum.call(b, prop))
+          __defNormalProp(a, prop, b[prop]);
+      }
+    return a;
+  };
+  var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+
+  // src/shell-runtime/utils.ts
+  function loadScript(src) {
+    return new Promise(function(resolve, reject) {
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = src;
+      script.onload = function() {
+        console.log("[ColorboxAI.OSS.Shell] Successfully loaded script: " + src);
+        resolve();
+      };
+      script.onerror = function(err) {
+        console.error("[ColorboxAI.OSS.Shell] Failed to load script: " + src, err);
+        reject(new Error("Failed to load script: " + src));
+      };
+      document.head.appendChild(script);
+    });
+  }
+  function getQuery(name) {
+    const params = new URLSearchParams(window.location.search || "");
+    return params.get(name) || "";
+  }
+  function resolvePagePi() {
+    try {
+      const search = window.location.search || "";
+      if (search) {
+        const params = new URLSearchParams(search);
+        const fromQuery = params.get("pi") || "";
+        if (fromQuery) return fromQuery;
+      }
+    } catch (error) {
+    }
+    const gs = window.globalState || {};
+    return gs.pi || "";
+  }
+  function resolvePagePl() {
+    const gs = window.globalState || {};
+    return document.title || gs.wxShareTitle || gs.name || "";
+  }
+  function buildTrackCustom() {
+    const pageUrl = window.location.href || "";
+    const pageTitle = resolvePagePl();
+    const ua = navigator.userAgent || "";
+    let landingUrl = pageUrl;
+    let sid = "";
+    try {
+      landingUrl = sessionStorage.getItem("hp-tracer-landing-url") || pageUrl;
+      if (!sessionStorage.getItem("hp-tracer-landing-url")) {
+        sessionStorage.setItem("hp-tracer-landing-url", pageUrl);
+      }
+      sid = sessionStorage.getItem("hp-tracer-session-id") || "";
+      if (!sid) {
+        sid = "cb-ai-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+        sessionStorage.setItem("hp-tracer-session-id", sid);
+      }
+    } catch (error) {
+    }
+    return {
+      pageUrl,
+      pageTitle,
+      ua,
+      url: pageUrl,
+      landing_url: landingUrl,
+      sid
+    };
+  }
+  function normalizeBridgeProjectId(value) {
+    const text = String(value == null ? "" : value).trim();
+    if (text.indexOf("project-ai-") === 0) {
+      return text.slice("project-ai-".length);
+    }
+    return text;
+  }
+  function isSameBridgeProjectId(left, right) {
+    return normalizeBridgeProjectId(left) === normalizeBridgeProjectId(right);
+  }
+  function createCallbackId(type) {
+    return "_colorbox_ai_" + type + "_" + Date.now() + "_" + Math.floor(Math.random() * 1e5) + "_";
+  }
+  function isHupuAppEnv() {
+    const ua = navigator.userAgent || "";
+    return /kanqiu/i.test(ua);
+  }
+  function parseBridgeResult(value) {
+    if (typeof value !== "string") return value;
+    try {
+      return JSON.parse(value);
+    } catch (error) {
+      return value;
+    }
+  }
+  function base64Encode(value) {
+    try {
+      return window.btoa(unescape(encodeURIComponent(value)));
+    } catch (error) {
+      try {
+        return window.btoa(value);
+      } catch (innerError) {
+        return "";
+      }
+    }
+  }
+  function detectAppWebView() {
+    const ua = navigator.userAgent || "";
+    return {
+      ua,
+      uaHasKanqiu: /kanqiu/i.test(ua),
+      hasIosBridge: !!(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.ClientBridge),
+      hasAndroidBridge: !!(window.androidBridge && window.androidBridge.callNativeAsync)
+    };
+  }
+  function formatTrackError(error) {
+    if (!error) return "unknown";
+    if (typeof error === "string") return error;
+    return error.message || error.stack || JSON.stringify(error);
+  }
+  function setupViewport() {
+    var _a;
+    try {
+      const meta = document.createElement("meta");
+      meta.name = "viewport";
+      meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover";
+      const existing = document.querySelector("meta[name=viewport]");
+      if (existing) {
+        (_a = existing.parentNode) == null ? void 0 : _a.replaceChild(meta, existing);
+      } else {
+        document.head.appendChild(meta);
+      }
+      console.log("[ColorboxAI.OSS.Shell] Successfully configured viewport meta tag.");
+    } catch (e) {
+      console.error("[ColorboxAI.OSS.Shell] Failed to configure viewport:", e);
+    }
+  }
+
+  // src/shell-runtime/bridge.ts
+  function isBridgeSuccess(res) {
+    return !!res && (res.status === 200 || res.status === "200" || res.status === 0 || res.status === void 0);
+  }
+  function sendViaLegacyHupuBridge(method, data) {
+    if (!isHupuAppEnv() || !window.HupuBridge || typeof window.HupuBridge.send !== "function") {
+      return null;
+    }
+    console.log("[ColorboxAI.Shell.rawBridgeSend] Routing via window.HupuBridge.send");
+    return window.HupuBridge.send(method, data || {}).then(function(res) {
+      console.log("[ColorboxAI.Shell.rawBridgeSend] HupuBridge.send resolved:", JSON.stringify(res));
+      return res;
+    }).catch(function(err) {
+      console.warn("[ColorboxAI.Shell.rawBridgeSend] HupuBridge.send call failed:", err);
+      return null;
+    });
+  }
+  function rawBridgeSend(method, data) {
+    console.log("[ColorboxAI.Shell.rawBridgeSend] Starting rawBridgeSend:", {
+      method,
+      data,
+      isHupuAppEnv: isHupuAppEnv(),
+      hasHupuBridgeModule: typeof window.HupuBridgeModule !== "undefined",
+      hasHupuBridge: typeof window.HupuBridge !== "undefined",
+      hasNainfo: window.HupuBridge && typeof window.HupuBridge.nainfo !== "undefined",
+      hasAndroidBridge: typeof window.androidBridge !== "undefined",
+      userAgent: navigator.userAgent
+    });
+    if (isHupuAppEnv() && window.HupuBridgeModule && window.HupuBridgeModule.default && typeof window.HupuBridgeModule.default.send === "function") {
+      console.log("[ColorboxAI.Shell.rawBridgeSend] Routing via window.HupuBridgeModule.default.send");
+      return window.HupuBridgeModule.default.send(method, data || {}).then(function(res) {
+        console.log("[ColorboxAI.Shell.rawBridgeSend] HupuBridgeModule.default.send resolved:", JSON.stringify(res));
+        if (!isBridgeSuccess(res)) {
+          const legacyRequest2 = sendViaLegacyHupuBridge(method, data);
+          if (legacyRequest2) {
+            console.warn("[ColorboxAI.Shell.rawBridgeSend] HupuBridgeModule returned non-success status, falling back to HupuBridge.send:", JSON.stringify(res));
+            return legacyRequest2;
+          }
+        }
+        return res;
+      }).catch(function(err) {
+        console.warn("[ColorboxAI.Shell.rawBridgeSend] HupuBridgeModule call failed:", err);
+        const legacyRequest2 = sendViaLegacyHupuBridge(method, data);
+        return legacyRequest2 || null;
+      });
+    }
+    const legacyRequest = sendViaLegacyHupuBridge(method, data);
+    if (legacyRequest) {
+      return legacyRequest;
+    }
+    return new Promise(function(resolve) {
+      const ua = navigator.userAgent || "";
+      const isIOS = /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(ua);
+      const successcb = createCallbackId("suc");
+      const errorcb = createCallbackId("err");
+      let done = false;
+      function finish(value) {
+        if (done) return;
+        done = true;
+        console.log("[ColorboxAI.Shell.rawBridgeSend] Fallback promise finish callback invoked:", {
+          successcb,
+          value: JSON.stringify(value)
+        });
+        try {
+          delete window[successcb];
+          delete window[errorcb];
+        } catch (error) {
+        }
+        resolve(value || null);
+      }
+      window[successcb] = finish;
+      window[errorcb] = finish;
+      window.setTimeout(function() {
+        finish(null);
+      }, 3e3);
+      if (!isIOS && !window.HupuBridge) {
+        window.HupuBridge = {
+          _handle_: function(cbName, cbResult) {
+            if (typeof window[cbName] === "function") {
+              try {
+                window[cbName](cbResult);
+              } catch (e) {
+              }
+            }
+          }
+        };
+      }
+      try {
+        const payload = {
+          method,
+          data: data || {},
+          successcb,
+          errorcb
+        };
+        if (isIOS && window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.ClientBridge) {
+          window.webkit.messageHandlers.ClientBridge.postMessage(payload);
+          return;
+        }
+        if (window.androidBridge && window.androidBridge.callNativeAsync) {
+          console.log("[ColorboxAI.Shell.rawBridgeSend] Routing via window.androidBridge.callNativeAsync:", {
+            method,
+            paramsString: JSON.stringify({ code: 200, data: data || {} }),
+            successcb
+          });
+          window.androidBridge.callNativeAsync(method, JSON.stringify({ code: 200, data: data || {} }), successcb);
+          return;
+        }
+      } catch (error) {
+      }
+      finish(null);
+    });
+  }
+
+  // src/shell-runtime/auth.ts
+  var AuthManager = /* @__PURE__ */ (function() {
+    let tokenPromise = null;
+    let cachedToken = "";
+    const isHupuAppEnv2 = function() {
+      const env = detectAppWebView();
+      return env.uaHasKanqiu || env.hasIosBridge || env.hasAndroidBridge;
+    };
+    const getSyncToken = function() {
+      const info = window.userInfo || window.HupuBridge && window.HupuBridge.nainfo || {};
+      return info.authToken || info.token || "";
+    };
+    const queryNativeToken = function() {
+      if (tokenPromise) {
+        return tokenPromise;
+      }
+      console.log("[ColorboxAI.AuthManager] Querying native bridge via bridgeReady...");
+      const p = rawBridgeSend("bridgeReady", {}).then(function(res) {
+        tokenPromise = null;
+        console.log("[ColorboxAI.AuthManager] rawBridgeSend resolved raw response:", JSON.stringify(res));
+        const token = res && (res.authToken || res.token) || "";
+        if (res) {
+          window.userInfo = res;
+          if (window.HupuBridge) {
+            window.HupuBridge.nainfo = window.HupuBridge.nainfo || {};
+            window.HupuBridge.nainfo.authToken = window.HupuBridge.nainfo.authToken || res.authToken;
+            window.HupuBridge.nainfo.token = window.HupuBridge.nainfo.token || res.token;
+          }
+        }
+        cachedToken = token;
+        return token;
+      }).catch(function(err) {
+        tokenPromise = null;
+        console.warn("[ColorboxAI.AuthManager] Failed to query native bridgeReady:", err);
+        return "";
+      });
+      tokenPromise = p;
+      return p;
+    };
+    return {
+      getToken: function() {
+        if (cachedToken) {
+          return Promise.resolve(cachedToken);
+        }
+        const syncToken = getSyncToken();
+        if (syncToken) {
+          cachedToken = syncToken;
+          return Promise.resolve(syncToken);
+        }
+        if (isHupuAppEnv2()) {
+          return queryNativeToken();
+        }
+        return Promise.resolve("");
+      },
+      isHupuApp: isHupuAppEnv2
+    };
+  })();
+
+  // src/shell-runtime/oss.ts
+  var ossSdkLoadingPromise = null;
+  function ensureOssSdk() {
+    if (window.KaleidoOSS) {
+      return Promise.resolve();
+    }
+    if (ossSdkLoadingPromise) {
+      return ossSdkLoadingPromise;
+    }
+    console.log("[ColorboxAI.OSS.Shell] SDKs not loaded. Starting async lazy loading...");
+    window.require = window.require || function(name) {
+      if (name === "ali-oss") {
+        return window.OSS;
+      }
+      if (name === "@hupu/kaleido-fed-sdk") {
+        return window.KaleidoOSS;
+      }
+      return null;
+    };
+    window.WebGuard = window.WebGuard || { hupuLog: function() {
+    } };
+    window.webGuard = window.webGuard || window.WebGuard;
+    const kaleidoSdkUrl = ""; // 本地离线版：OSS 上传已移除
+    ossSdkLoadingPromise = new Promise(function(resolve, reject) { reject(new Error("本地离线版：OSS 上传不可用")); }).then(function() {
+      if (!window.OSS) {
+        throw new Error("Aliyun OSS SDK loaded, but window.OSS is still undefined!");
+      }
+      console.log("[ColorboxAI.OSS.Shell] window.OSS resolved successfully. Now loading Hupu KaleidoOSS SDK...");
+      return loadScript(kaleidoSdkUrl);
+    }).then(function() {
+      const SDK = window.KaleidoOSS || window["kaleido-fed-sdk"];
+      if (SDK && !window.KaleidoOSS) {
+        window.KaleidoOSS = SDK.default || SDK;
+      }
+      if (!window.KaleidoOSS) {
+        throw new Error("Hupu KaleidoOSS SDK loaded, but window.KaleidoOSS is still undefined!");
+      }
+      console.log("[ColorboxAI.OSS.Shell] window.KaleidoOSS resolved successfully. Lazy load complete!");
+    });
+    return ossSdkLoadingPromise;
+  }
+  function handleOssUpload(data, event) {
+    const payload = data.payload || {};
+    const file = payload.file;
+    const filename = payload.filename || file && file.name || "user_upload.png";
+    const callbackId = payload.callbackId;
+    const uploadModule = "colorbox-ai-activity";
+    const uploadPath = "/colorbox-ai-activity";
+    console.log("[ColorboxAI.OSS.Shell.Diagnostics] Context check:", {
+      hasHupuBridge: typeof window.HupuBridge !== "undefined",
+      HupuBridgeKeys: window.HupuBridge ? Object.keys(window.HupuBridge) : [],
+      nainfoType: window.HupuBridge && typeof window.HupuBridge.nainfo,
+      nainfoKeys: window.HupuBridge && window.HupuBridge.nainfo ? Object.keys(window.HupuBridge.nainfo) : [],
+      hasHupuBridgeModule: typeof window.HupuBridgeModule !== "undefined",
+      HupuBridgeModuleKeys: window.HupuBridgeModule ? Object.keys(window.HupuBridgeModule) : [],
+      hasHupuBasicInfo: typeof window._HUPU_BASIC_INFO !== "undefined",
+      HupuBasicInfoType: typeof window._HUPU_BASIC_INFO,
+      hasUserInfo: typeof window.userInfo !== "undefined",
+      documentCookie: document.cookie
+    });
+    console.log("[ColorboxAI.OSS.Shell.Diagnostics] Detailed structures:", {
+      userInfoRaw: JSON.stringify(window.userInfo),
+      nainfoRaw: JSON.stringify(window.HupuBridge && window.HupuBridge.nainfo),
+      isHupuApp: AuthManager.isHupuApp()
+    });
+    console.log("[ColorboxAI.OSS.Shell] Starting processing of upload. File info:", {
+      callbackId,
+      filename,
+      fileSize: file ? file.size : 0,
+      fileType: file ? file.type : "",
+      uploadModule,
+      uploadPath
+    });
+    if (!file) {
+      console.error("[ColorboxAI.OSS.Shell] Error: No file provided in the upload payload.");
+      try {
+        event.source.postMessage({
+          protocol: "colorbox-ai-bridge",
+          version: 1,
+          direction: "host-to-frame",
+          type: "oss.upload.callback",
+          payload: { callbackId, error: "No file provided" }
+        }, "*");
+      } catch (err) {
+        console.error("[ColorboxAI.Shell.OssProxy] Failed to post error callback to iframe:", err);
+      }
+    } else {
+      const performUpload = function(activeToken) {
+        if (AuthManager.isHupuApp() && !activeToken) {
+          console.error("[ColorboxAI.OSS.Shell] Error: User is not logged in inside App.");
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "oss.upload.callback",
+              payload: { callbackId, error: "\u672A\u767B\u5F55\u6216\u767B\u5F55\u6001\u5931\u6548\uFF0C\u65E0\u6CD5\u4E0A\u4F20\u8D44\u6E90" }
+            }, "*");
+          } catch (err) {
+            console.error("[ColorboxAI.Shell.OssProxy] Failed to post login error callback to iframe:", err);
+          }
+          return;
+        }
+        let ext = "";
+        const dotIdx = filename.lastIndexOf(".");
+        if (dotIdx >= 0) {
+          ext = filename.substring(dotIdx);
+        }
+        const now = /* @__PURE__ */ new Date();
+        const Y = now.getFullYear();
+        const M = now.getMonth() + 1;
+        const D = now.getDate();
+        const uniqueId = Y % 100 + "" + M + D + "-" + Math.random().toString(36).slice(-6);
+        const objectKey = "user-upload/" + uniqueId + ext;
+        console.log("[ColorboxAI.OSS.Shell] Generated OSS objectKey:", objectKey);
+        ensureOssSdk().then(function() {
+          let hostOssClient = null;
+          console.log("[ColorboxAI.OSS.Shell] Resolving OSS SDK client...");
+          if (window.__colorbox_kaleido_oss__) {
+            console.log("[ColorboxAI.OSS.Shell] Found pre-initialized window.__colorbox_kaleido_oss__ client.");
+            hostOssClient = window.__colorbox_kaleido_oss__;
+          } else {
+            console.log("[ColorboxAI.OSS.Shell] Pre-initialized client not found. Checking window.KaleidoOSS or require('@hupu/kaleido-fed-sdk')...");
+            const KaleidoOSS = window.KaleidoOSS || (typeof window.require === "function" ? window.require("@hupu/kaleido-fed-sdk") : null);
+            if (KaleidoOSS) {
+              console.log("[ColorboxAI.OSS.Shell] Found KaleidoOSS SDK. Instantiating new client...", {
+                appId: "b1AcxWKA1u0hyDYv5kXgImZBRSQ=",
+                sk: "HioGpkmGe9bsW0iqRLJEyGoLr4Q=",
+                path: uploadPath
+              });
+              console.log("[ColorboxAI.OSS.Shell] HupuBridge nainfo at instantiation:", window.HupuBridge && window.HupuBridge.nainfo);
+              hostOssClient = new KaleidoOSS({
+                appId: "b1AcxWKA1u0hyDYv5kXgImZBRSQ=",
+                sk: "HioGpkmGe9bsW0iqRLJEyGoLr4Q=",
+                path: uploadPath,
+                module: uploadModule,
+                action: "1"
+              });
+              if (typeof hostOssClient.start === "function") {
+                console.log("[ColorboxAI.OSS.Shell] Calling hostOssClient.start()...");
+                hostOssClient.start();
+              }
+              window.__colorbox_kaleido_oss__ = hostOssClient;
+            } else {
+              console.warn("[ColorboxAI.OSS.Shell] Both window.KaleidoOSS and require('@hupu/kaleido-fed-sdk') are undefined/not found.");
+            }
+          }
+          if (!hostOssClient) {
+            console.error("[ColorboxAI.OSS.Shell] Critical Error: Hupu KaleidoOSS SDK is not available in host shell environment!");
+            throw new Error("Hupu KaleidoOSS SDK is not available in host shell environment");
+          }
+          console.log("[ColorboxAI.OSS.Shell] Initiating multipartUpload for key:", objectKey);
+          return hostOssClient.multipartUpload(objectKey, file, {});
+        }).then(function(res) {
+          console.log("[ColorboxAI.OSS.Shell] multipartUpload resolved successfully:", res);
+          let downloadUrl = res.downloadUrl || "./assets/" + res.name;
+          const currentProjId = data.projectId || window.__colorbox_ai_project__ && window.__colorbox_ai_project__.projectId || "";
+          if (currentProjId) {
+            const separator = downloadUrl.indexOf("?") >= 0 ? "&" : "?";
+            downloadUrl += separator + "activityId=" + encodeURIComponent(currentProjId);
+          }
+          console.log("[ColorboxAI.OSS.Shell] Resulting downloadUrl (with activityId):", downloadUrl);
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "oss.upload.callback",
+              payload: {
+                callbackId,
+                downloadUrl,
+                name: res.name
+              }
+            }, "*");
+          } catch (err) {
+            console.error("[ColorboxAI.Shell.OssProxy] Failed to post success callback to iframe:", err);
+          }
+        }).catch(function(err) {
+          console.error("[ColorboxAI.OSS.Shell] Exception caught during upload setup or execution:", err);
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "oss.upload.callback",
+              payload: { callbackId, error: err.message || String(err) }
+            }, "*");
+          } catch (postErr) {
+            console.error("[ColorboxAI.Shell.OssProxy] Failed to post catch error callback to iframe:", postErr);
+          }
+        });
+      };
+      AuthManager.getToken().then(function(activeToken) {
+        performUpload(activeToken);
+      }).catch(function() {
+        performUpload("");
+      });
+    }
+  }
+
+  // src/shell-runtime/http.ts
+  function handleHttpRequest(data, event) {
+    const payload = data.payload || {};
+    const requestId = payload.requestId;
+    const config = payload.config || {};
+    const url = config.url;
+    console.log("[ColorboxAI.Http.Shell] Received http.request payload from iframe for requestId:", requestId, config);
+    if (!url) {
+      try {
+        event.source.postMessage({
+          protocol: "colorbox-ai-bridge",
+          version: 1,
+          direction: "host-to-frame",
+          type: "http.response",
+          payload: {
+            requestId,
+            response: { error: "URL is required" }
+          }
+        }, "*");
+      } catch (postErr) {
+        console.error("[ColorboxAI.Http.Shell] Failed to postMessage error response to iframe:", postErr);
+      }
+    } else {
+      const performRequest = function(activeToken) {
+        const fetchHeaders = Object.assign({}, config.headers || {});
+        if (activeToken) {
+          fetchHeaders["X-Hupu-Token"] = activeToken;
+        }
+        const fetchOptions = {
+          method: config.method || "GET",
+          headers: fetchHeaders
+        };
+        if (config.data && (config.method === "POST" || config.method === "PUT" || config.method === "DELETE")) {
+          fetchOptions.body = typeof config.data === "string" ? config.data : JSON.stringify(config.data);
+        }
+        fetch(url, fetchOptions).then(function(response) {
+          const statusCode = response.status;
+          const responseHeaders = {};
+          try {
+            response.headers.forEach(function(value, key) {
+              responseHeaders[key] = value;
+            });
+          } catch (headerErr) {
+          }
+          return response.text().then(function(text) {
+            let responseData = text;
+            try {
+              responseData = JSON.parse(text);
+            } catch (jsonErr) {
+            }
+            try {
+              event.source.postMessage({
+                protocol: "colorbox-ai-bridge",
+                version: 1,
+                direction: "host-to-frame",
+                type: "http.response",
+                payload: {
+                  requestId,
+                  response: {
+                    statusCode,
+                    data: responseData,
+                    headers: responseHeaders
+                  }
+                }
+              }, "*");
+            } catch (postErr) {
+              console.error("[ColorboxAI.Http.Shell] Failed to postMessage success response to iframe:", postErr);
+            }
+          });
+        }).catch(function(fetchErr) {
+          console.error("[ColorboxAI.Http.Shell] Proxy fetch failed for requestId:", requestId, fetchErr);
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "http.response",
+              payload: {
+                requestId,
+                response: { error: fetchErr.message || String(fetchErr) }
+              }
+            }, "*");
+          } catch (postErr) {
+            console.error("[ColorboxAI.Http.Shell] Failed to postMessage error response to iframe:", postErr);
+          }
+        });
+      };
+      AuthManager.getToken().then(function(activeToken) {
+        performRequest(activeToken);
+      }).catch(function() {
+        performRequest("");
+      });
+    }
+  }
+
+  // src/shell-runtime/security.ts
+  function handleCheckAudit(data, event) {
+    const payload = data.payload || {};
+    const content = payload.content;
+    const callbackId = payload.callbackId;
+    const getRuntimeEnv = function() {
+      const queryEnv = getQuery("env");
+      if (queryEnv === "sit" || queryEnv === "test") return "sit";
+      if (queryEnv === "stg" || queryEnv === "pre") return "stg";
+      if (queryEnv === "dev") return "dev";
+      const host = window.location.host || "";
+      if (host.indexOf("dev") >= 0 || host.indexOf("local") >= 0) return "dev";
+      if (host.indexOf("-sit") >= 0) return "sit";
+      if (host.indexOf("-stg") >= 0) return "stg";
+      return "prod";
+    };
+    const activityHost = function() {
+      const ACTIVITY_HOST_MAP = {
+        dev: "",
+        sit: "",
+        stg: "",
+        prod: ""
+      };
+      return ACTIVITY_HOST_MAP[getRuntimeEnv()] || ACTIVITY_HOST_MAP.prod;
+    };
+    const checkAuditWithToken = function(activeToken) {
+      const url = ""; // 本地离线版：不调用联网审计接口
+      const headers = { "Content-Type": "application/json;charset=UTF-8" };
+      if (activeToken) headers["X-Hupu-Token"] = activeToken;
+      console.log("[ColorboxAI.Security.Shell] Executing checkAudit fetch:", {
+        url,
+        headers,
+        tokenLength: activeToken ? activeToken.length : 0,
+        isHupuAppEnv: isHupuAppEnv()
+      });
+      fetch(url, {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ content, title: "" }),
+        credentials: activeToken ? "same-origin" : "include"
+      }).then(function(response) {
+        if (!response.ok) throw new Error("Http request failed: " + response.status);
+        return response.json();
+      }).then(function(res) {
+        console.log("[ColorboxAI.Security.Shell] Audit API response:", JSON.stringify(res));
+        const succeed = res && res.succeed;
+        const internalCode = res && res.internalCode;
+        const rawCode = res && res.code;
+        const rawMsg = res && (res.message || res.msg);
+        const rawData = res && res.data;
+        let result = {
+          code: 500,
+          message: rawMsg || "\u670D\u52A1\u5F00\u5C0F\u5DEE\u4E86\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5",
+          data: null
+        };
+        if (internalCode === "AC100001" || rawCode === 401 || rawCode === 403) {
+          result = {
+            code: 401,
+            message: rawMsg || "\u672A\u767B\u5F55\u6216\u767B\u5F55\u6001\u5931\u6548",
+            data: null
+          };
+        } else if (succeed === true || rawCode === 1 || internalCode === "AC000000") {
+          result = {
+            code: 200,
+            message: "success",
+            data: rawData === true
+          };
+        }
+        try {
+          event.source.postMessage({
+            protocol: "colorbox-ai-bridge",
+            version: 1,
+            direction: "host-to-frame",
+            type: "security.checkAudit.callback",
+            payload: { callbackId, result }
+          }, "*");
+        } catch (postErr) {
+          console.error("[ColorboxAI.Security.Shell] Failed to postMessage success callback to iframe:", postErr);
+        }
+      }).catch(function(err) {
+        console.error("[ColorboxAI.Security.Shell] Audit check failed:", err);
+        const msg = err.message || "";
+        let code = 500;
+        let message = err.message || "\u670D\u52A1\u5F00\u5C0F\u5DEE\u4E86\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5";
+        if (msg.indexOf("401") >= 0 || msg.indexOf("403") >= 0) {
+          code = 401;
+          message = "\u672A\u767B\u5F55\u6216\u767B\u5F55\u6001\u5931\u6548";
+        }
+        try {
+          event.source.postMessage({
+            protocol: "colorbox-ai-bridge",
+            version: 1,
+            direction: "host-to-frame",
+            type: "security.checkAudit.callback",
+            payload: {
+              callbackId,
+              result: { code, message, data: null }
+            }
+          }, "*");
+        } catch (postErr) {
+          console.error("[ColorboxAI.Security.Shell] Failed to postMessage error callback to iframe:", postErr);
+        }
+      });
+    };
+    console.log("[ColorboxAI.Security.Shell] Received security.checkAudit payload from iframe:", {
+      content,
+      callbackId,
+      isHupuAppEnv: isHupuAppEnv(),
+      userAgent: navigator.userAgent
+    });
+    AuthManager.getToken().then(function(activeToken) {
+      checkAuditWithToken(activeToken);
+    }).catch(function() {
+      checkAuditWithToken("");
+    });
+  }
+
+  // src/core/trackGuard.ts
+  var GLOBAL_STATE_KEY = "__COLORBOX_AI_TRACK_GUARD_STATE__";
+  var GLOBAL_CONFIG_KEY = "__COLORBOX_AI_TRACK_GUARD_CONFIG__";
+  var GLOBAL_LOG_KEY = "__COLORBOX_AI_TRACK_GUARD_DEBUG__";
+  var UNKNOWN_BLK = "__UNKNOWN_BLK__";
+  var VALID_BLK_PATTERN = /^BMC(?:00[1-9]|0[1-9]\d|[1-9]\d{2})$/;
+  var VALID_ACTS = /* @__PURE__ */ new Set(["click", "exposure", "access", "videoact"]);
+  var TRACK_GUARD_DEFAULTS = {
+    /** 是否启用埋点上报保护。 */
+    enabled: true,
+    /** 页面初始化保护窗口，单位毫秒。 */
+    initWindowMs: 5e3,
+    /** 页面初始化窗口内允许上报的最大埋点数。 */
+    maxInitReports: 50,
+    /** 页面和 blk 频率统计窗口，单位毫秒。 */
+    pageWindowMs: 6e4,
+    /** 单页面在 pageWindowMs 内允许上报的最大埋点数。 */
+    maxPageReportsPerWindow: 200,
+    /** 同一个 blk 在 pageWindowMs 内允许上报的最大埋点数。 */
+    maxBlkReportsPerWindow: 100
+  };
+  function getGlobalObj() {
+    return globalThis;
+  }
+  function compactWindow(values, now, windowMs) {
+    return values.filter((value) => now - value < windowMs);
+  }
+  function resolveConfig(config) {
+    const globalConfig = getGlobalObj()[GLOBAL_CONFIG_KEY] || {};
+    return __spreadValues(__spreadValues(__spreadValues({}, TRACK_GUARD_DEFAULTS), globalConfig), config || {});
+  }
+  function getState() {
+    const globalObj = getGlobalObj();
+    if (!globalObj[GLOBAL_STATE_KEY]) {
+      globalObj[GLOBAL_STATE_KEY] = {
+        pageStartedAt: Date.now(),
+        initReports: 0,
+        pageReports: [],
+        blkReports: /* @__PURE__ */ new Map(),
+        blockedReports: []
+      };
+    }
+    return globalObj[GLOBAL_STATE_KEY];
+  }
+  function getDebugLog() {
+    const globalObj = getGlobalObj();
+    if (!globalObj[GLOBAL_LOG_KEY]) {
+      globalObj[GLOBAL_LOG_KEY] = [];
+    }
+    return globalObj[GLOBAL_LOG_KEY];
+  }
+  function reportTrackGuardLog(entry) {
+    const globalObj = getGlobalObj();
+    const hupuLog = globalObj.WebGuard && globalObj.WebGuard.hupuLog;
+    if (typeof hupuLog !== "function") {
+      return;
+    }
+    try {
+      hupuLog({
+        type: "jsError",
+        message: `[ColorboxAI.TrackGuard] ${entry.scene} ${entry.reason}: ${entry.message}`,
+        stack: new Error().stack || "",
+        detail: entry
+      });
+    } catch (error) {
+    }
+  }
+  function recordTrackGuardLog(params, result, context = {}) {
+    const log = getDebugLog();
+    const next = {
+      ts: Date.now(),
+      scene: context.scene || "track.guard",
+      url: context.url || (typeof window !== "undefined" && window.location ? window.location.href : ""),
+      reason: result.reason || "track-guard",
+      message: result.message || "track guard blocked",
+      act: (params == null ? void 0 : params.act) ? String(params.act) : void 0,
+      blk: (params == null ? void 0 : params.blk) === void 0 || (params == null ? void 0 : params.blk) === null || (params == null ? void 0 : params.blk) === "" ? UNKNOWN_BLK : String(params.blk),
+      pos: (params == null ? void 0 : params.pos) ? String(params.pos) : void 0,
+      traceId: context.traceId,
+      detail: {
+        state: result.state || void 0
+      }
+    };
+    log.push(next);
+    if (log.length > 200) {
+      log.shift();
+    }
+    try {
+      console.warn("[ColorboxAI.TrackGuard] " + next.message, next);
+    } catch (error) {
+    }
+    reportTrackGuardLog(next);
+    return next;
+  }
+  function getBlk(params) {
+    const rawBlk = params && typeof params === "object" ? params.blk : "";
+    return rawBlk === void 0 || rawBlk === null || rawBlk === "" ? UNKNOWN_BLK : String(rawBlk);
+  }
+  function getAct(params) {
+    const rawAct = params && typeof params === "object" ? params.act : "";
+    return rawAct === void 0 || rawAct === null ? "" : String(rawAct);
+  }
+  function isValidBlk(blk) {
+    return VALID_BLK_PATTERN.test(blk);
+  }
+  function isValidAct(act) {
+    return VALID_ACTS.has(act);
+  }
+  function isAccessBlkOptional(act, blk) {
+    return act === "access" && (blk === UNKNOWN_BLK || blk === "-1");
+  }
+  function createBlockedResult(reason, message, state, blk, now, blkReports) {
+    state.blockedReports.push({ reason, blk, ts: now });
+    if (state.blockedReports.length > 200) {
+      state.blockedReports.shift();
+    }
+    return {
+      allowed: false,
+      reason,
+      message,
+      state: {
+        initReports: state.initReports,
+        pageReportsInWindow: state.pageReports.length,
+        blkReportsInWindow: blkReports.length
+      }
+    };
+  }
+  function applyTrackGuard(params, config, context) {
+    const guard = resolveConfig(config);
+    if (!guard.enabled) {
+      return { allowed: true };
+    }
+    const now = Date.now();
+    const state = getState();
+    const act = getAct(params);
+    const blk = getBlk(params);
+    const logContext = context || {};
+    const inInitWindow = guard.initWindowMs > 0 && now - state.pageStartedAt < guard.initWindowMs;
+    const pageReports = compactWindow(state.pageReports, now, guard.pageWindowMs);
+    state.pageReports = pageReports;
+    const blkReports = compactWindow(state.blkReports.get(blk) || [], now, guard.pageWindowMs);
+    state.blkReports.set(blk, blkReports);
+    const shouldReportActFormat = !isValidAct(act);
+    const shouldReportBlkFormat = !isAccessBlkOptional(act, blk) && !isValidBlk(blk);
+    if (inInitWindow && guard.maxInitReports > 0 && state.initReports >= guard.maxInitReports) {
+      const result2 = createBlockedResult(
+        "init-limit",
+        `\u9875\u9762\u521D\u59CB\u5316\u9636\u6BB5\u57CB\u70B9\u4E0A\u62A5\u8D85\u8FC7 ${guard.maxInitReports} \u4E2A\uFF0C\u5DF2\u4E22\u5F03\u672C\u6B21\u57CB\u70B9`,
+        state,
+        blk,
+        now,
+        blkReports
+      );
+      recordTrackGuardLog(params, result2, logContext);
+      return result2;
+    }
+    if (guard.maxPageReportsPerWindow > 0 && pageReports.length >= guard.maxPageReportsPerWindow) {
+      const result2 = createBlockedResult(
+        "page-minute-limit",
+        `\u5355\u9875\u9762 ${Math.round(guard.pageWindowMs / 1e3)} \u79D2\u5185\u57CB\u70B9\u4E0A\u62A5\u8D85\u8FC7 ${guard.maxPageReportsPerWindow} \u4E2A\uFF0C\u5DF2\u4E22\u5F03\u672C\u6B21\u57CB\u70B9`,
+        state,
+        blk,
+        now,
+        blkReports
+      );
+      recordTrackGuardLog(params, result2, logContext);
+      return result2;
+    }
+    if (guard.maxBlkReportsPerWindow > 0 && blkReports.length >= guard.maxBlkReportsPerWindow) {
+      const result2 = createBlockedResult(
+        "blk-minute-limit",
+        `\u540C\u4E00\u4E2A blk \u5728 ${Math.round(guard.pageWindowMs / 1e3)} \u79D2\u5185\u57CB\u70B9\u4E0A\u62A5\u8D85\u8FC7 ${guard.maxBlkReportsPerWindow} \u4E2A\uFF0C\u5DF2\u4E22\u5F03\u672C\u6B21\u57CB\u70B9`,
+        state,
+        blk,
+        now,
+        blkReports
+      );
+      recordTrackGuardLog(params, result2, logContext);
+      return result2;
+    }
+    if (inInitWindow) {
+      state.initReports += 1;
+    }
+    pageReports.push(now);
+    blkReports.push(now);
+    state.pageReports = pageReports;
+    state.blkReports.set(blk, blkReports);
+    const result = {
+      allowed: true,
+      state: {
+        initReports: state.initReports,
+        pageReportsInWindow: pageReports.length,
+        blkReportsInWindow: blkReports.length
+      }
+    };
+    if (shouldReportActFormat) {
+      recordTrackGuardLog(params, __spreadProps(__spreadValues({}, result), {
+        reason: "act-format-warning",
+        message: "\u57CB\u70B9 act \u4EC5\u652F\u6301 click\u3001exposure\u3001access\u3001videoact\uFF1B\u672C\u6B21\u57CB\u70B9\u672A\u62E6\u622A\uFF0C\u5DF2\u7EE7\u7EED\u4E0A\u62A5"
+      }), logContext);
+    }
+    if (shouldReportBlkFormat) {
+      recordTrackGuardLog(params, __spreadProps(__spreadValues({}, result), {
+        reason: "blk-format-warning",
+        message: "\u57CB\u70B9 blk \u5EFA\u8BAE\u4F7F\u7528 BMC001-BMC999 \u7684\u516D\u4F4D\u683C\u5F0F\uFF08\u5982 BMC001\uFF09\uFF1Baccess \u53EF\u4E0D\u4F20 blk \u6216\u4F20 -1\u3002\u672C\u6B21\u57CB\u70B9\u672A\u62E6\u622A\uFF0C\u5DF2\u7EE7\u7EED\u4E0A\u62A5"
+      }), logContext);
+    }
+    return result;
+  }
+
+  // src/shell-runtime/track.ts
+  var trackDebugLog = [];
+  var SHELL_TRACK_RUNTIME_REV = "track-debug-v4";
+  function mergeTrackParams(trackParams) {
+    const params = trackParams || {};
+    const pi = resolvePagePi();
+    const pl = resolvePagePl();
+    const ext = Object.assign({ pi, pl }, params.ext || {});
+    if (params.label && !ext.label) {
+      ext.label = params.label;
+    }
+    let incomingCustom = params.custom;
+    if (!incomingCustom || typeof incomingCustom !== "object" || Array.isArray(incomingCustom)) {
+      incomingCustom = {};
+    }
+    const custom = Object.assign({}, buildTrackCustom(), incomingCustom);
+    const gs = window.globalState || {};
+    const merged = Object.assign({}, params, {
+      pg: gs.pageTrackCode || "PHBS7947",
+      ext,
+      custom
+    });
+    delete merged.label;
+    gs.pi = pi;
+    return merged;
+  }
+  function pushTrackDebug(stage, detail) {
+    const entry = { stage, detail: detail || {}, ts: Date.now() };
+    trackDebugLog.push(entry);
+    if (trackDebugLog.length > 200) {
+      trackDebugLog.shift();
+    }
+    try {
+      console.log("[ColorboxAI.Track] " + stage, detail || {});
+    } catch (error) {
+    }
+  }
+  function sendHttpHermesTrack(params, trackTraceId) {
+    const screen = window.screen || {};
+    const referrer = document.referrer || "";
+    const a_key = "333555a123933efd4678200cfc304de4_1564375798324";
+    const payload = Object.assign({
+      title: document.title,
+      api: window.location.href,
+      scr: (screen.width || 0) + "x" + (screen.height || 0),
+      rurl: referrer,
+      clt: Date.now(),
+      sty: "ontouchstart" in window ? "m" : "pc",
+      kv: "v1"
+    }, params || {});
+    try {
+      const dataList = base64Encode(JSON.stringify([payload]));
+      const query = new URLSearchParams(window.location.search || "");
+      const env = query.get("env") === "sit" || query.get("env") === "stg" ? "test_" : "";
+      const url = "//hermes.hupu.com/" + env + "h.gif?a_key=" + a_key + "&key_version=v1&data_list=" + encodeURIComponent(dataList) + "&hp_tracer_version=colorbox-lite-1.0";
+      const img = new Image(1, 1);
+      img.src = url;
+      pushTrackDebug("shell.hermes.http.sent", { trackTraceId: trackTraceId || "", act: payload.act, pg: payload.pg });
+    } catch (e) {
+      pushTrackDebug("shell.hermes.http.error", {
+        trackTraceId: trackTraceId || "",
+        message: e && e.message || String(e)
+      });
+    }
+  }
+  function track(params, trackTraceId) {
+    const next = mergeTrackParams(Object.assign({ act: "access" }, params || {}));
+    const guardResult = applyTrackGuard(next, void 0, {
+      scene: "shell-runtime.track",
+      url: window.location ? window.location.href : "",
+      traceId: trackTraceId || ""
+    });
+    if (!guardResult.allowed) {
+      pushTrackDebug("shell.track.guard.block", {
+        trackTraceId: trackTraceId || "",
+        reason: guardResult.reason,
+        message: guardResult.message,
+        act: next.act,
+        pg: next.pg,
+        blk: next.blk,
+        pos: next.pos
+      });
+      try {
+        console.warn("[ColorboxAI.TrackGuard] " + guardResult.message, next);
+      } catch (error) {
+      }
+      return;
+    }
+    const env = detectAppWebView();
+    const isHupuApp = env.uaHasKanqiu || env.hasIosBridge || env.hasAndroidBridge;
+    const hasHpTracer = !!(window.HupuHpTracer && typeof window.HupuHpTracer.track === "function");
+    const channel = isHupuApp ? "hermesBridge" : hasHpTracer ? "hpTracer" : "hermesHttp";
+    pushTrackDebug("shell.track.route", {
+      shellRev: SHELL_TRACK_RUNTIME_REV,
+      trackTraceId: trackTraceId || "",
+      act: next.act,
+      pg: next.pg,
+      blk: next.blk,
+      pos: next.pos,
+      channel,
+      isHupuApp,
+      uaHasKanqiu: env.uaHasKanqiu,
+      hasIosBridge: env.hasIosBridge,
+      hasAndroidBridge: env.hasAndroidBridge,
+      hasHpTracer,
+      uaPreview: (env.ua || "").slice(0, 160)
+    });
+    pushTrackDebug("shell.track.merge", {
+      trackTraceId: trackTraceId || "",
+      act: next.act,
+      pg: next.pg,
+      blk: next.blk,
+      pos: next.pos
+    });
+    const trackQueue = window.__colorbox_ai_track_queue__ || [];
+    trackQueue.push(next);
+    if (isHupuApp) {
+      pushTrackDebug("shell.hermes.bridge", { trackTraceId: trackTraceId || "", act: next.act, pg: next.pg });
+      rawBridgeSend("hupu.common.hermes", {
+        type: next.act,
+        hermes_data: next,
+        hermes_key: next.pg
+      });
+      pushTrackDebug("shell.hermes.bridge.sent", { trackTraceId: trackTraceId || "", act: next.act, pg: next.pg });
+      return;
+    }
+    if (hasHpTracer) {
+      pushTrackDebug("shell.hpTracer.invoke", { trackTraceId: trackTraceId || "", act: next.act, pg: next.pg });
+      try {
+        window.HupuHpTracer.track(next);
+        pushTrackDebug("shell.hpTracer.invoke.ok", { trackTraceId: trackTraceId || "", act: next.act });
+      } catch (error) {
+        pushTrackDebug("shell.hpTracer.invoke.error", {
+          trackTraceId: trackTraceId || "",
+          message: formatTrackError(error)
+        });
+      }
+      return;
+    }
+    pushTrackDebug("shell.hermes.http", { trackTraceId: trackTraceId || "", act: next.act, pg: next.pg });
+    sendHttpHermesTrack(next, trackTraceId || "");
+  }
+  function normalizeBridgeTrackPayload(payload) {
+    if (!payload || typeof payload !== "object") return {};
+    if (payload.trackParams && typeof payload.trackParams === "object") {
+      return payload.trackParams;
+    }
+    return payload;
+  }
+  function setNativeShare(shareData) {
+    const data = Object.assign({}, shareData, {
+      linkUrl: window.location.href
+    });
+    rawBridgeSend("hupu.share.setNative", data);
+  }
+
+  // src/shell-runtime/index.ts
+  (function() {
+    var _a, _b;
+    const config = window.__COLORBOX_AI_SHELL_CONFIG__ || {
+      projectId: "",
+      settings: {
+        title: "",
+        trackingCode: "",
+        bizCategory: "",
+        shareTitle: "",
+        shareSubtitle: "",
+        shareCover: ""
+      }
+    };
+    const { settings, projectId } = config;
+    const title = settings.title || "\u864E\u6251\u6D3B\u52A8";
+    const bizCategory = (settings.bizCategory || "").trim();
+    const pageId = (projectId || "").trim();
+    const pagePi = bizCategory && pageId ? `activity_${bizCategory}_${pageId}` : "";
+    const webviewBackground = ((_a = settings.theme) == null ? void 0 : _a.webviewBackground) || "#ffffff";
+    const containerBackground = ((_b = settings.theme) == null ? void 0 : _b.containerBackground) || "#ffffff";
+    const shareData = {
+      title: settings.shareTitle || title,
+      desc: settings.shareSubtitle || "\u6253\u5F00\u864E\u6251App\uFF0C\u770B\u66F4\u591A\u7CBE\u5F69\u5185\u5BB9",
+      text: settings.shareSubtitle || "\u6253\u5F00\u864E\u6251App\uFF0C\u770B\u66F4\u591A\u7CBE\u5F69\u5185\u5BB9",
+      linkUrl: "",
+      imageUrl: settings.shareCover || ""
+    };
+    const bridgeEvents = [];
+    const trackQueue = [];
+    const globalState = {
+      name: title,
+      pageTrackCode: settings.trackingCode || "PHBS7947",
+      wxShareTitle: settings.shareTitle || title,
+      wxShareSubTitle: settings.shareSubtitle || "",
+      wxShareImage: settings.shareCover || "",
+      bizCode: settings.bizCategory || "",
+      webViewColor: webviewBackground,
+      containerColor: containerBackground,
+      pi: pagePi
+    };
+    document.title = title;
+    window.globalState = globalState;
+    window.__colorbox_ai_track_queue__ = trackQueue;
+    if (typeof window !== "undefined" && window.HupuBridgeModule) {
+      const bridgeInstance = window.HupuBridgeModule.default || window.HupuBridgeModule;
+      let nainfo = null;
+      try {
+        nainfo = bridgeInstance.nainfo;
+      } catch (e) {
+      }
+      if (!window.HupuBridge) {
+        window.HupuBridge = {};
+      }
+      if (nainfo) {
+        window.HupuBridge.nainfo = window.HupuBridge.nainfo || nainfo;
+      }
+    }
+    function receive(event) {
+      const data = event.data;
+      if (!data || data.protocol !== "colorbox-ai-bridge" || data.direction !== "frame-to-host") {
+        return;
+      }
+      if (data.version !== 1) {
+        return;
+      }
+      bridgeEvents.push(data);
+      if (bridgeEvents.length > 100) {
+        bridgeEvents.shift();
+      }
+      if (data.type === "bridge.call") {
+        const payload = data.payload.payload;
+        const method = payload.method;
+        const bridgeData = payload.data;
+        const successcb = payload.successcb;
+        const errorcb = payload.errorcb;
+        console.log("[ColorboxAI.Shell.BridgeProxy] Received bridge.call from iframe.", {
+          method,
+          successcb,
+          errorcb
+        });
+        rawBridgeSend(method, bridgeData).then(function(res) {
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "bridge.callback",
+              payload: { callbackName: successcb, args: [res] }
+            }, "*");
+          } catch (err) {
+            console.error("[ColorboxAI.Shell.BridgeProxy] Failed to postMessage success callback to iframe:", err);
+          }
+        }).catch(function(err) {
+          try {
+            event.source.postMessage({
+              protocol: "colorbox-ai-bridge",
+              version: 1,
+              direction: "host-to-frame",
+              type: "bridge.callback",
+              payload: { callbackName: errorcb, args: [err || { code: 500, message: "Bridge call failed" }] }
+            }, "*");
+          } catch (err2) {
+            console.error("[ColorboxAI.Shell.BridgeProxy] Failed to postMessage error callback to iframe:", err2);
+          }
+        });
+      }
+      if (data.type === "oss.upload") {
+        handleOssUpload(data, event);
+      }
+      if (data.type === "http.request") {
+        handleHttpRequest(data, event);
+      }
+      if (data.type === "navigation.open") {
+        const navPayload = data.payload || {};
+        const navUrl = navPayload.url;
+        const navTarget = navPayload.target || "_blank";
+        console.log("[ColorboxAI.Navigation.Shell] Received navigation.open event from iframe. URL:", navUrl, "Target:", navTarget);
+        if (navUrl) {
+          const navUa = navigator.userAgent || "";
+          const navIsHupu = /kanqiu/i.test(navUa);
+          console.log("[ColorboxAI.Navigation.Shell] Environment check - navIsHupu (kanqiu):", navIsHupu);
+          if (navIsHupu && navUrl.indexOf("huputiyu://") === 0) {
+            console.log("[ColorboxAI.Navigation.Shell] Hupu App Schema detected. Executing top-level redirect via window.location.href.");
+            window.location.href = navUrl;
+          } else {
+            if (navTarget === "_blank") {
+              window.open(navUrl, "_blank");
+            } else {
+              window.location.href = navUrl;
+            }
+          }
+        }
+      }
+      if (data.type === "storage.getValue") {
+        const payload = data.payload || {};
+        const key = payload.key;
+        const callbackId = payload.callbackId;
+        console.log("[ColorboxAI.Storage.Shell] Received storage.getValue from iframe for key:", key);
+        let value = null;
+        try {
+          value = localStorage.getItem(key);
+        } catch (error) {
+        }
+        try {
+          event.source.postMessage({
+            protocol: "colorbox-ai-bridge",
+            version: 1,
+            direction: "host-to-frame",
+            type: "storage.getValue.callback",
+            payload: { callbackId, value: parseBridgeResult(value) }
+          }, "*");
+        } catch (postErr) {
+          console.error("[ColorboxAI.Storage.Shell] Failed to postMessage getValue callback to iframe:", postErr);
+        }
+      }
+      if (data.type === "storage.setValue") {
+        const payload = data.payload || {};
+        const key = payload.key;
+        const value = payload.value;
+        const callbackId = payload.callbackId;
+        console.log("[ColorboxAI.Storage.Shell] Received storage.setValue from iframe for key:", key);
+        let ok = false;
+        try {
+          localStorage.setItem(key, typeof value === "string" ? value : JSON.stringify(value));
+          ok = true;
+        } catch (error) {
+        }
+        try {
+          event.source.postMessage({
+            protocol: "colorbox-ai-bridge",
+            version: 1,
+            direction: "host-to-frame",
+            type: "storage.setValue.callback",
+            payload: { callbackId, ok }
+          }, "*");
+        } catch (postErr) {
+          console.error("[ColorboxAI.Storage.Shell] Failed to postMessage setValue callback to iframe:", postErr);
+        }
+      }
+      if (data.type === "events.track" || data.type === "track.report") {
+        const trackTraceId = data.payload && data.payload.trackTraceId || "";
+        const trackParams = normalizeBridgeTrackPayload(data.payload);
+        pushTrackDebug("shell.receive.track", {
+          trackTraceId,
+          type: data.type,
+          act: trackParams.act,
+          blk: trackParams.blk,
+          pos: trackParams.pos
+        });
+        track(trackParams, trackTraceId);
+      }
+      if (data.type === "social.share") {
+        setNativeShare(shareData);
+      }
+      if (data.type === "security.checkAudit") {
+        handleCheckAudit(data, event);
+      }
+    }
+    window.__colorbox_runtime__ = true;
+    window.__colorbox_ai_shell__ = true;
+    window.__colorbox_ai_project__ = { projectId, settings };
+    window.__colorbox_ai_bridge_events__ = bridgeEvents;
+    window.__colorbox_ai_track_queue__ = trackQueue;
+    window.__colorbox_ai_track_debug__ = trackDebugLog;
+    window.__colorbox_ai_shell_track_rev__ = SHELL_TRACK_RUNTIME_REV;
+    window.__colorbox_ai_shell_bridge_version__ = 2;
+    pushTrackDebug("shell.boot", Object.assign({ shellRev: SHELL_TRACK_RUNTIME_REV, projectId }, detectAppWebView()));
+    window.globalState = globalState;
+    window.__colorbox_get_globalState__ = function() {
+      return window.globalState || {};
+    };
+    window.ColorboxAIHost = {
+      bridgeSend: rawBridgeSend,
+      setNativeShare: function() {
+        setNativeShare(shareData);
+      },
+      track,
+      isSameBridgeProjectId,
+      normalizeBridgeProjectId
+    };
+    window.addEventListener("message", receive);
+    window.addEventListener("error", function(event) {
+      bridgeEvents.push({
+        protocol: "colorbox-ai-bridge",
+        version: 1,
+        direction: "shell",
+        projectId,
+        type: "shell.error",
+        payload: { message: event.message, sourceFile: event.filename, line: event.lineno, column: event.colno },
+        timestamp: Date.now()
+      });
+    }, true);
+    window.addEventListener("unhandledrejection", function(event) {
+      bridgeEvents.push({
+        protocol: "colorbox-ai-bridge",
+        version: 1,
+        direction: "shell",
+        projectId,
+        type: "shell.error",
+        payload: { message: event.reason && event.reason.message || String(event.reason || ""), stack: event.reason && event.reason.stack || "" },
+        timestamp: Date.now()
+      });
+    });
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function() {
+        setupViewport();
+        setNativeShare(shareData);
+        track({ act: "access" });
+      });
+    } else {
+      setupViewport();
+      setNativeShare(shareData);
+      track({ act: "access" });
+    }
+  })();
+})();
+
+})();</script>
+</head>
+<body>
+  <div id="ai-render-root">
+    <iframe
+      id="ai-render-frame"
+      class="ai-render-frame"
+      data-src="./__ai_app.html?v=28"
+      title="我创造的完美球员"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+      referrerpolicy="no-referrer"
+      allow="clipboard-write"
+      loading="eager"
+    ></iframe>
+    <script>
+      (function () {
+        var frame = document.getElementById("ai-render-frame");
+        var appEntry = frame.getAttribute("data-src");
+        var outerParams = new URLSearchParams(window.location.search || "");
+        var debugParams = ["debug", "sensors_debug", "colorbox_debug"];
+        var appParams = [];
+        debugParams.forEach(function (name) {
+          if (outerParams.get(name) === "true") {
+            appParams.push(name + "=true");
+          }
+        });
+        frame.src = appEntry + (appParams.length ? "?" + appParams.join("&") : "");
+      })();
+    </script>
+  </div>
+</body>
+</html>
