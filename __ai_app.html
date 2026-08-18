@@ -12330,6 +12330,19 @@ function showMyCard() {
 }
 
 function renderMyCard(isFinal) {
+  // ★ NBA2.0：状态面板（4 区块 + 球队默契展开）
+  try {
+    var _sp = document.getElementById('mycard-status-strip');
+    if (!_sp) {
+      _sp = document.createElement('div');
+      _sp.id = 'mycard-status-strip';
+      var _target = document.getElementById('career-area') || document.querySelector('#screen-mycard > div') || document.getElementById('screen-mycard');
+      if (_target && _target.parentNode) _target.parentNode.insertBefore(_sp, _target);
+    }
+    if (typeof renderPlayerStateStrip === 'function') {
+      _sp.outerHTML = renderPlayerStateStrip();
+    }
+  } catch (e) {}
   const ps = STATE.season.playerStats;
   const gp = ps.games || 1;
   const avg = {
