@@ -12330,16 +12330,16 @@ function showMyCard() {
 }
 
 function renderMyCard(isFinal) {
-  // ★ NBA2.0：状态面板（4 区块 + 球队默契展开）
+  // ★ NBA2.0：状态面板（4 区块 + 球队默契展开）挂到 mycard-content 开头
   try {
-    var _sp = document.getElementById('mycard-status-strip');
-    if (!_sp) {
-      _sp = document.createElement('div');
-      _sp.id = 'mycard-status-strip';
-      var _target = document.getElementById('career-area') || document.querySelector('#screen-mycard > div') || document.getElementById('screen-mycard');
-      if (_target && _target.parentNode) _target.parentNode.insertBefore(_sp, _target);
-    }
     if (typeof renderPlayerStateStrip === 'function') {
+      var _sp = document.getElementById('mycard-status-strip');
+      if (!_sp) {
+        _sp = document.createElement('div');
+        _sp.id = 'mycard-status-strip';
+        var _target = document.getElementById('mycard-content');
+        if (_target) _target.insertBefore(_sp, _target.firstChild);
+      }
       _sp.outerHTML = renderPlayerStateStrip();
     }
   } catch (e) {}
@@ -12504,6 +12504,7 @@ function renderMyCard(isFinal) {
   
 html('mycard-content').innerHTML = `
     <div class="mycard">
+      ${(typeof renderPlayerStateStrip === 'function') ? renderPlayerStateStrip() : ''}
       <div class="mc-header">
         <div class="mc-pos">${SIM_CONFIG.POSITIONS[STATE.position]}</div>
         <div class="mc-name">${getHupuDisplayName()}</div>
